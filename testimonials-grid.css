@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%) ;
+}
+
+
+.container{
+    width: 1135px;
+    height: 600px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 290px 1fr;
+    gap: 30px;
+}
+
+.container .one,
+.container .two,
+.container .three,
+.container .four,
+.container .five{
+    padding: 30px;
+    box-shadow: 0 0 15px 5px #e0e5eb;
+}
+
+.container .one{
+    background-color: hsl(263, 55%, 52%);
+    grid-area: 1/1/1/3;
+    border-radius: 8px;
+    position: relative;
+}
+.container .one > img{
+    position: absolute;
+    right: 80px;
+    top: 0;
+    opacity: 50%;
+}
+.container .two{
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 8px;
+}
+.container .three{
+    background-color: hsl(0, 0%, 81%);
+    grid-area: 1/4/3/4;
+    border-radius: 8px;
+}
+.container .four{
+    background-color: hsl(0, 0%, 81%);
+    border-radius: 8px;
+}
+.container .five{
+    background-color: hsl(219, 29%, 14%);
+    grid-area: 2/2/2/4;
+    border-radius: 8px;
+}
+
+
+
+.container .info{
+    display: flex;
+    align-items: center;
+}
+.container .info img{
+    width: 35px;
+    border: 3px solid #ffffff57;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.container .info .name{
+    color: #ffffffe6;
+}
+.container .info h5{
+    font-size: 14px;
+    font-weight: 200;
+}
+.container .info span{
+    opacity: 50%;
+    font-size: 13px;
+}
+.container h1{
+    color: white;
+    font-size: 21px;
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.container p{
+    font-size: 13px;
+    color: white;
+    opacity: 70%;
+    line-height: 1.3;
+}
+
+.container .three,
+.container .four{
+    background-color: white;
+}
+.container .three p,
+.container .four p{
+    color: #686868;
+}
+.container .three h1,
+.container .four h1{
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+.container .three .info .name,
+.container .four .info .name{
+    color: hsl(217, 19%, 35%)
+}
+
+
+
+
+
+
+@media (max-width: 375px){
+    .container{
+        width: 326px;
+        height: 100vh;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        row-gap: 20px;
+    }
+    .container .one{
+        grid-area: 1/1/1/1;
+    }
+    .container .two{
+        grid-area: 2/1/2/1;
+    }
+    .container .three{
+        grid-area: 4/1/4/1;
+    }
+    .container .four{
+        grid-area: 3/1/3/1;
+    }
+    .container .five{
+        grid-area: 5/1/5/1;
+    }
+    .container .one > img{
+        right: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+/* hsl(263, 55%, 52%)
+hsl(217, 19%, 35%)
+hsl(219, 29%, 14%)
+hsl(0, 0%, 81%)
+hsl(210, 46%, 95%) body background-color*/
