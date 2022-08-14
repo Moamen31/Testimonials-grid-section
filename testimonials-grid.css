@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -10,13 +11,11 @@ body{
 
 
 .container{
-    width: 1135px;
-    height: 600px;
+    width: 90vw;
     margin: 30px auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 290px 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
 }
 
 .container .one,
@@ -25,7 +24,7 @@ body{
 .container .four,
 .container .five{
     padding: 30px;
-    box-shadow: 0 0 15px 5px #e0e5eb;
+    box-shadow: 0 0 5px 0px #ccc;
 }
 
 .container .one{
@@ -120,16 +119,7 @@ body{
 
 
 
-@media (max-width: 375px){
-    .container{
-        width: 326px;
-        height: 100vh;
-        margin: 50px auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-        row-gap: 20px;
-    }
+@media (max-width: 991px){
     .container .one{
         grid-area: 1/1/1/1;
     }
